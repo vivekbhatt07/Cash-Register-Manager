@@ -17,8 +17,101 @@ body {
   margin: 0;
 }
 
-/* .bill,
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 80px auto;
+  padding: 16px;
+  gap: 12px;
+  background-image: linear-gradient(45deg, #85ffbd 0%, #fffb7d 100%);
+  border-radius: 16px;
+}
+
+.container_head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.container_head_title {
+  margin: 0;
+  padding: 0;
+}
+
+.container_head_subtitle {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.container_body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.input_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.bill {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
 .cash {
   display: flex;
   flex-direction: column;
-} */
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.check_btn {
+  padding: 0.5rem 1rem;
+  font-family: inherit;
+  background-color: #bada55;
+  border-radius: 12px;
+  border: none;
+  color: #fff;
+}
+
+.return_change {
+  display: flex;
+  width: 100%;
+}
+
+table {
+  width: 100%;
+}
+
+table,
+th,
+td {
+  border: 1.5px solid #000;
+  border-collapse: collapse;
+}
+
+td {
+  text-align: center;
+  height: 50px;
+  width: 50px;
+}
+
+input {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 12px;
+}
