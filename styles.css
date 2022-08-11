@@ -15,17 +15,19 @@ html {
 body {
   padding: 0;
   margin: 0;
+  /* background-color: #171717; */
 }
 
 .container {
   display: flex;
   flex-direction: column;
   width: 40%;
-  margin: 80px auto;
+  margin: 70px auto;
   padding: 16px;
   gap: 12px;
   background-image: linear-gradient(45deg, #85ffbd 0%, #fffb7d 100%);
   border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .container_head {
