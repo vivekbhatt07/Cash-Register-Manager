@@ -66,32 +66,28 @@ body {
 }
 
 .bill {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
+  display: block;
 }
 
 .cash {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
+  display: none;
 }
 
-.check_btn {
+.check_btn_wrap {
+  display: none;
+}
+.btn {
   padding: 0.5rem 1rem;
   font-family: inherit;
   background-color: #bada55;
   border-radius: 12px;
   border: none;
   color: #fff;
+  cursor: pointer;
 }
 
 .return_change {
-  display: flex;
+  display: none;
   width: 100%;
 }
 
@@ -116,4 +112,11 @@ input {
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 12px;
+  text-align: center;
+}
+
+label {
+  display: block;
+  text-align: center;
+  padding-bottom: 8px;
 }
