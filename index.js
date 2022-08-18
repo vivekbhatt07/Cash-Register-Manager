@@ -12,7 +12,7 @@ const denominations = [2000, 500, 100, 20, 10, 5, 1];
 
 nextBtn.addEventListener("click", function showCashGiven() {
   errorMessageHideHandler();
-  if (billAmount.value === "") {
+  if (billAmount.value === "" || billAmount.value === 0) {
     errorMessage.innerText = errorMessageShowHandler("Invalid Value");
   } else {
     cashBox.style.display = "block";
