@@ -9,11 +9,10 @@ const CheckBtnWrap = document.querySelector(".check_btn_wrap");
 const returnChange = document.querySelector(".return_change");
 
 const denominations = [2000, 500, 100, 20, 10, 5, 1];
-console.log(typeof(billAmount.value));
 nextBtn.addEventListener("click", function showCashGiven() {
   errorMessageHideHandler();
-  if (billAmount.value === "" || billAmount.value === '0') {
-    errorMessageShowHandler("Invalid Value");
+  if (Number(billAmount.value) === 0 || Number(billAmount.value) < 0) {
+    errorMessageShowHandler("Invalid Data Entered !");
   } else {
     cashBox.style.display = "block";
     nextBtn.style.display = "none";
@@ -25,21 +24,15 @@ nextBtn.addEventListener("click", function showCashGiven() {
 
 checkButton.addEventListener("click", function clickHandler() {
   errorMessageHideHandler();
-  if (billAmount.value >= 0) {
-    if (cashGiven.value >= billAmount.value) {
+    if (Number(cashGiven.value) >= Number(billAmount.value)) {
       returnChange.style.display = "flex";
-      const amountReturn = cashGiven.value - billAmount.value;
+      const amountReturn = Number(cashGiven.value) - Number(billAmount.value);
       numNotesReturn(amountReturn);
-    }else if (cashGiven.value === "" || cashGiven.value === "0") {
+    }else if (Number(cashGiven.value) === 0) {
       errorMessageShowHandler("Invalid Value");
-    } else if(cashGiven.value < billAmount.value) {
+    } else if(Number(cashGiven.value) < Number(billAmount.value)) {
         errorMessageShowHandler("Dont' Worry We Have Dishes Left To Be Cleaned");
     }
-  } else {
-    errorMessageShowHandler("Invalid Data Entered !");
-  }
-
-
 });
 
 function errorMessageShowHandler(message) {
